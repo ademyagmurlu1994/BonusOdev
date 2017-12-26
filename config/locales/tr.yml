@@ -1,0 +1,23 @@
+tr:
+    Softwareengineering: 'Yazılım Mühendisliği'
+    Homepage: 'Anasayfa'
+    Programs: 'Programlar'
+    Graphicsanddesign: 'Grafik ve Tasarım'
+    SignUp: "Kayıt Ol"
+    SignIn: "Giriş Yap"
+    LogOut: "Çıkış Yap"
+    ChangingPassword: "Parola Değiştirme"
+    EnterYourNewPassword: "Yeni Parolanızı Giriniz"
+    NewPasswordConfirmation: "Yeni Parola Doğrulaması"
+    ChangeMyPassword: "Şifremi Değiştir"
+    time:
+     formats:
+       long: "%Y-%m-%d %H:%M:%S"
+    Edit: 'Ayarla'
+    Show: 'Görüntüle'
+    Delete: 'Kaldır'
+    Back: 'Geriye Dön'
+    Acomment: 'Yorum Yap'
+    Site_Footer: "Bu Site Yazılımla İlgilenen Herkes İçin Yapılmıştır   © Adem YAĞMURLU Tüm Hakları Açıktır..."
+    Search: 'Ara'
+    NewTopic: 'Yeni Konu'

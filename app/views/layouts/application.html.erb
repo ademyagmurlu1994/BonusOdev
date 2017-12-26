@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adem YAĞMURLU</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar" style='background-color:#ddd'>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><%= t 'Softwareengineering' %></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="https://<%=request.host%>"><%= t 'Homepage' %></a></li>
+          <li><a href="#"><%= t 'Programs' %></a></li>
+          <li><a href="#"><%= t 'Graphicsanddesign' %></a></li>
+          <li><a href="?locale=fr"><IMG src='<%= image_path('france.ico') %>' width='15' height='15' /> Français</a></li>
+          <li><a href="?locale=tr"><IMG src='<%= image_path('turkey.ico') %>' width='15' height='15' /> Türkçe</a></li>
+          <li><a href="?locale=en"><IMG src='<%= image_path('england.ico') %>' width='15' height='15' /> English</a></li>
+          <li> <%= link_to t('NewTopic'), new_post_path, class:"glyphicon glyphicon-share" %> </li>
+       
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default"><%= t('Search')%></button>
+           </form>
+            <% if user_signed_in? %>
+              <em><%=image_tag current_user.image.url(:mini) if current_user.image?%> </em>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=current_user.name%> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+              <li><%= link_to t("LogOut"), destroy_user_session_path, class:"glyphicon glyphicon-log-out", :method => :delete %></li>
+              <li><%= link_to t("Edit"), edit_user_registration_path, class:"glyphicon glyphicon-share"%></li>
+            </ul>
+          </li>
+        <% else %>
+           <li><%= link_to(t('SignIn'), new_user_session_path, class:"glyphicon glyphicon-log-in") %></li>
+           <li><%= link_to(t('SignUp'), new_user_registration_path, class:"glyphicon glyphicon-user") %></li>
+        <% end %> 
+         </ul>
+      </div>
+    </nav>
+</div>
+<DIV class='container-fluid'>
+      <DIV class='row'>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active"><CENTER>
+      <img src="<%= image_url('01.jpg') %>" alt="...">
+      <div class="carousel-caption">
+      	<h3>Yazılım Çözümleri</h3>
+      </div>
+      </CENTER>
+    </div>
+    <div class="item">
+      <CENTER>
+      <img src="<%= image_url('02.jpg') %>" alt="...">
+      <div class="carousel-caption">
+      	<h3>Mühendislik Alanındaki Yenilikler</h3>
+      </div>
+      </CENTER>
+    </div>
+    <div class="item">
+      <CENTER>
+      <img src="<%= image_url('03.jpg') %>" alt="...">
+      <div class="carousel-caption">
+      	<h3>Gençliğe Sen de Bir Şans Ver</h3>
+      </div>
+      </CENTER>
+    </div>
+  </div>
+ 
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+        <DIV '!important' class='container-fluid row'>
+          <ASIDE class='col-md-4 col-lg-3'>
+            <DIV>DUYURULAR</DIV>
+            <DIV class='jumbotron' ><H3>Yazılım Mühendisi</H3><P>Konusunda uzman personel aranıyor.</P></DIV>
+          </ASIDE>
+          <div class="col-md-8 col-lg-9 content">
+            <%= yield %>
+          </div>
+           <SECTION class='col-md-8'>
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+          </SECTION>
+
+        </DIV>
+      </DIV>
+    </DIV>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+
+ <div class="container-fluid main-container">
+  <footer  style='text-align:center'>
+         <%=t('Site_Footer')%>
+  </footer>
+</div>
+  </body>
+</html>

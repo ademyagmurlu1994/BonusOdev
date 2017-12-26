@@ -1,0 +1,23 @@
+fr:
+    Softwareengineering: 'Génie logiciel'
+    Homepage: 'Homepage'
+    Programs: 'Programmes'
+    Graphicsanddesign: 'Graphisme et design'
+    SignUp: "S'inscrire"
+    SignIn: "Se Connecter"
+    LogOut: "Connectez - Out"
+    ChangingPassword: "Changer le mot de"
+    EnterYourNewPassword: "Entrez votre nouveau mot de passe"
+    NewPasswordConfirmation: "Nouvelle vérification du mot de passe"
+    ChangeMyPassword: "Changer mot de passe"
+    time:
+     formats:
+       long: "%Y-%m-%d %H:%M:%S"
+    Edit: 'éditer'
+    Show: 'vue'
+    Delete: 'supprimer'
+    Back: 'Dos'
+    Acomment: "commentaire"
+    Site_Footer: "Ce site est fait pour tout le monde intéressé par le logiciel © Adem YAĞMURLU Tous les droits sont ouverts ..."
+    Search: 'recherche'
+    NewTopic: 'Nouveau sujet'
